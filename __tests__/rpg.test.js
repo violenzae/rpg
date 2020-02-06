@@ -63,7 +63,7 @@ describe('Battle initialize', () => {
     let newBattle = new Battle();
     newBattle.initialize();
 
-    expect(newBattle.char.health).toContain('100');
+    expect(newBattle.char.length).toBeGreaterThan(0);
   });
 });
 
