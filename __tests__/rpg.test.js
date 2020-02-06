@@ -1,5 +1,6 @@
 import {Hero} from './../src/rpg.js';
 import {Boss} from './../src/rpg.js';
+import {Battle} from './../src/rpg.js';
 
 describe('Hero', () => {
 
@@ -53,6 +54,16 @@ describe('Boss assign and randomize drop', () => {
   expect (
     boss.drop === "Boomerang" || 
     boss.drop === "Feather").toBe(true);
+  });
+});
+
+describe('Battle initialize', () => {
+
+  test('will place newly generated hero and random boss objects into the battle constructor', () => {
+    let newBattle = new Battle();
+    newBattle.initialize();
+
+    expect(newBattle.char.health).toContain('100');
   });
 });
 

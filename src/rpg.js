@@ -54,8 +54,6 @@ export class Boss {
 }
 
 
-
-
 export class Battle {
   constructor() {
    this.char = [];
