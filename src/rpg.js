@@ -1,8 +1,7 @@
-export class ToothBrush {
+export class Hero {
   constructor(){
     this.level = 1;
     this.health = 100;
-    this.cleanliness = 50;
     this.strength = 20;
     this.inventory = [];
   }
@@ -20,14 +19,15 @@ export class ToothBrush {
 
 export class Boss {
   constructor(lvl, name, drop) {
-    this.lvl = lvl;
+    this.lvl = 0;
     this.name = name;
     this.drop = drop;
+
   }
 
  randomizeLvl() { 
-this.lvl = Math.floor(Math.random() * 5 + 1);
-return this.lvl;
+  this.lvl = Math.floor(Math.random() * 5 + 1);
+  return this.lvl;
  }
 
  randomizeName() {
@@ -54,16 +54,22 @@ return this.lvl;
 }
 
 
+
+
 export class Battle {
-  constructor(bossLvl,charLvl) {
-    this.bossLvl = bossLvl;
-    this.charLvl = charLvl;
-  }
+  constructor() {
+   this.char = [];
+   this.boss = [];
+   }
 
-  winCheck() {
-    let tempBossLvl = 
-    this.bossLvl += boss.lvl;
-  }
+ initialize() {
+   let newHero = new Hero;
+   this.char.push(newHero);
 
-
+   let newBoss = new Boss();
+   newBoss.randomizeDrop();
+   newBoss.randomizeLvl();
+   newBoss.randomizeName();
+   this.boss.push(newBoss);
+ }
 }

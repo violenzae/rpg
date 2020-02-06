@@ -1,13 +1,13 @@
-import {ToothBrush} from './../src/rpg.js';
+import {Hero} from './../src/rpg.js';
 import {Boss} from './../src/rpg.js';
 
-describe('Toothbrush', () => {
+describe('Hero', () => {
 
   test('user picks a character', () => {
-  let toothBrush = new ToothBrush;
+  let newHero = new Hero;
   
-  expect(toothBrush.level).toEqual(1);
-  expect(toothBrush.health).toEqual(100);
+  expect(newHero.level).toEqual(1);
+  expect(newHero.health).toEqual(100);
   });
 });
  
@@ -56,15 +56,13 @@ describe('Boss assign and randomize drop', () => {
   });
 });
 
-describe('Battle win conditions', () => {
+// describe('Battle win conditions', () => {
 
-  test('player will win battle by gaining xp and item if level is higher than boss', () => {
+//   test('player will win battle by gaining 1 level if level is higher than boss', () => {
   
-  let boss = new Boss(2, "Grumpy");
-  let toothBrush = new ToothBrush(4,100,50,20)
+//   let boss = new Boss(2, "Grumpy");
+//   let newHero = new Hero(4,100,50,20, [])
 
-  expect (
-    boss.drop === "Boomerang" || 
-    boss.drop === "Feather").toBe(true);
-  });
-});
+//   expect (newHero.level).toEqual(5);
+//   });
+// });
