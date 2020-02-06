@@ -19,13 +19,13 @@ export class Hero {
 
 export class Boss {
   constructor(lvl, name, drop) {
-    this.lvl = 0;
+    this.lvl = lvl;
     this.name = name;
     this.drop = drop;
 
   }
 
- randomizeLvl() { 
+ randomizeLvl() {
   this.lvl = Math.floor(Math.random() * 5 + 1);
   return this.lvl;
  }
@@ -62,14 +62,17 @@ export class Battle {
    this.boss = [];
    }
 
+  nextBoss() {
+  this.boss[0].randomizeLvl();
+  this.boss[0].randomizeName();
+  this.boss[0].randomizeDrop();
+}
+
  initialize() {
    let newHero = new Hero;
    this.char.push(newHero);
 
-   let newBoss = new Boss();
-   newBoss.randomizeDrop();
-   newBoss.randomizeLvl();
-   newBoss.randomizeName();
+   let newBoss = new Boss(0,"","");
    this.boss.push(newBoss);
  }
 }

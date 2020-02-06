@@ -8,6 +8,7 @@ import './styles.css';
 $(document).ready(function() {
   let newBattle = new Battle;
   newBattle.initialize();
+  newBattle.nextBoss();
   
   console.log(newBattle);
   console.log(newBattle.boss[0])
