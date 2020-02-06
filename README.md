@@ -16,7 +16,7 @@ _Pizza was created to help the customer choose what kind of pizza they want, and
 | Behavior | Input | Output |
 |---|---|---|
 |the program takes a selected character type and it outputs stats | barbarian| level 1, strength 70, insanity 70, health 60, inventory; empty|
-| then the character interacts with a battle event if the user clicks battle| *click* battle| boss random lvl 3 |
+| then the character interacts with a battle event if the user clicks battle and creates a random Boss| *click* battle| boss random lvl 3, boss random name Grumpy, boss random item (based on lvl range) Boomerang |
 | then the program determines if the boss lvl is equal to or greater than charcacter lvl, the player loses| boss lvl3 vs plyr lvl 2| lost fight|
 |then the program doesn't add any experience points to the character property if the battle is lost| barbarian, lvl 1, strength 70, insanity 70, health 60,| barbarian, lvl 1, strength 70, insanity 70, health 60, |
 | then the program determines if the boss lvl is equal to or less than charcacter lvl, the player wins | boss lvl 1, plyr lvl2  | won fight  |
